@@ -19,7 +19,7 @@ connection.connect((err) => {
 
 const artists = [];
 for( let i = 1; i < 101; i++) {
-    let artist = {
+    const artist = {
         name: `${faker.name.firstName()}${faker.random.number()}`,
         user_img: faker.image.avatar(),
         followers: faker.random.number()
