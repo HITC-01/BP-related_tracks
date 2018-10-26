@@ -19,7 +19,7 @@ CREATE TABLE `Songs` (
   `id` BIGINT AUTO_INCREMENT,
   `title` VARCHAR(100),
   `artist_id` BIGINT,
-  `genre` VARCHAR(25),
+  `genre` VARCHAR(100),
   `album_name` VARCHAR(100),
   `album_img` VARCHAR(100),
   `play_count` BIGINT DEFAULT 0,
