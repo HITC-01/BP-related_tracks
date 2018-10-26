@@ -96,7 +96,7 @@ songSeed.then((seeded) => {
       current.like_count,
       current.repost_count,
       current.comment_count,
-      '[1,2,4]',
+      'current.related_songs,
     ];
     db.query(sql, userData, (err) => {
       if (err) {
