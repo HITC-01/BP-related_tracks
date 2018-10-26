@@ -26,6 +26,7 @@ CREATE TABLE `Songs` (
   `like_count` BIGINT DEFAULT 0,
   `repost_count` BIGINT DEFAULT 0,
   `comment_count` BIGINT DEFAULT 0,
+  `related_songs` JSON,
   PRIMARY KEY (`id`)
 );
 
