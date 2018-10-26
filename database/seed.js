@@ -16,6 +16,7 @@ connection.connect((err) => {
 });
 
 const artists = [];
+<<<<<<< HEAD
 for (let i = 1; i < 101; i += 1) {
   const artist = {
     name: `${faker.name.firstName()}${faker.random.number()}`,
@@ -23,6 +24,15 @@ for (let i = 1; i < 101; i += 1) {
     followers: faker.random.number(),
   };
   artists.push(artist);
+=======
+for( let i = 1; i < 101; i++) {
+    const artist = {
+        name: `${faker.name.firstName()}${faker.random.number()}`,
+        user_img: faker.image.avatar(),
+        followers: faker.random.number()
+    }
+    artists.push(artist);
+>>>>>>> 78260e2696a97ed485eb0d3222be054ab1738f42
 }
 
 const songs = [];
