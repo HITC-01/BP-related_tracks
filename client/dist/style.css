@@ -1,0 +1,55 @@
+.songDataPlaceholder {
+  margin: 0;
+  height: 252px;
+  width: 300px;
+}
+
+.rel_songStats {
+  padding: 0px;
+}
+.rel_songStats li {
+  display: inline;
+}
+
+.rel_artworkPlaceholder {
+  display: inline-block;
+}
+.rel_songDataContainer {
+  display: inline-block;
+  /* float: left; */
+}
+
+.rel_songStatComponent i {
+  color: #999;
+  padding: 5px;
+}
+
+.rel_songStatContainer {
+  display: inline-block;
+  float: left;
+}
+
+.rel_artistName {
+  color: #999;
+}
+
+.viewAll {
+  float: right;
+}
+
+.rel_albumImg {
+  display: inline-block;
+}
+
+.songContainerHeader {
+  display: inline-block;
+  color: #999;
+}
+
+span {
+  padding-right: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
