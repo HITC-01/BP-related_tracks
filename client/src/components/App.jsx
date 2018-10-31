@@ -15,6 +15,14 @@ class App extends React.Component {
     this.fetchRelatedSongs()
       .then((songs) => {
         this.setState({ songs });
+      })
+      .then(() => {
+        console.log(document.getElementById('rel_artistName'));
+        console.log('test');
+        const artistModal = document.getElementById('rel_artistName');
+        const divModal = document.getElementById('myModal');
+        artistModal.onmouseover = () => { this.mouseOver(divModal); };
+        artistModal.onmouseout = () => { this.mouseOut(divModal); };
       });
   }
 
@@ -76,7 +84,7 @@ class App extends React.Component {
             <span><i className="fab fa-soundcloud" /></span>
             <span className="rel_actualTitle">Related tracks</span>
           </h3>
-          <span className="viewAll">View all</span>
+          <span className="viewAll rel_hover">View all</span>
 
         </div>
         <ul>
