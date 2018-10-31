@@ -10,13 +10,17 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
-    "seed": "node database/seed.js"
+    "seed": "node database/seed.js",
+    "test": "jest"
   },
   "dependencies": {
     "bluebird": "^3.5.2",
     "body-parser": "^1.18.3",
+    "es6-promise": "^4.2.5",
     "express": "^4.16.4",
     "faker": "^4.1.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jest-config": "^23.6.0",
     "jquery": "^3.3.1",
     "mysql": "^2.16.0",
     "react": "^16.6.0",
@@ -26,11 +30,18 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.8.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "node-fetch": "^2.2.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
   }
