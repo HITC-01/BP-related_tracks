@@ -15,7 +15,6 @@ app.get('/api/songs/:songid/related', (req, res) => {
     if (err) {
       res.status(500).send(err);
     } else {
-      // console.log(Object.assign({}, results));
       res.send(Object.assign({}, results));
     }
   });
