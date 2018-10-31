@@ -15,7 +15,8 @@ connection.connect((err) => {
 });
 
 const getRelated = (callback) => {
-  const sql = 'SELECT related_songs FROM Songs WHERE id=1;';
+  const randNum = Math.floor(Math.random() * 6) + 1;
+  const sql = `SELECT related_songs FROM Songs WHERE id=${randNum};`;
   connection.query(sql, (err, results) => {
     if (err) {
       callback(err);

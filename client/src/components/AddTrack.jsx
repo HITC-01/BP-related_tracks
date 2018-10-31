@@ -1,4 +1,5 @@
 import React from 'react';
+import ArtistInfo from './ArtistInfo.jsx';
 
 const AddTrack = (props) => {
   const { onLoad } = props;
@@ -7,8 +8,8 @@ const AddTrack = (props) => {
     onLoad.map((song) => {
       let songLengthRestricted = '';
       // console.log('testing');
-      if (song.title.length > 40) {
-        songLengthRestricted = song.title.slice(0, 40).concat('...');
+      if (song.title.length > 35) {
+        songLengthRestricted = song.title.slice(0, 35).concat('...');
       }
       return (
         <div>
@@ -23,7 +24,8 @@ const AddTrack = (props) => {
               </span>
               <div className="rel_songDataContainer">
                 <div className="rel_artistName">
-                  <span>{song.name.toUpperCase()}</span>
+                  <span id="rel_artistName" className="rel_hover">{song.name.toUpperCase()}</span>
+                  <ArtistInfo />
                 </div>
                 <div className="rel_songName">
                   <span>{songLengthRestricted || song.title}</span>
