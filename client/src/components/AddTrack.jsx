@@ -6,7 +6,6 @@ const AddTrack = (props) => {
   return (
     onLoad.map((song) => {
       let songLengthRestricted = '';
-      // console.log('testing');
       if (song.title.length > 40) {
         songLengthRestricted = song.title.slice(0, 40).concat('...');
       }
