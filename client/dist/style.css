@@ -19,7 +19,7 @@ ul{
   display: inline;
 }
 
-.rel_artworkPlaceholder {
+.rel_artworkPlaceholder, .rel_albumImg {
   display: inline-block;
 }
 
@@ -94,6 +94,7 @@ ul {
 .rel_hover:hover {
   color: #000;
 }
+<<<<<<< HEAD
 
 #myModal {
     display: none; /* Hidden by default */
@@ -118,3 +119,5 @@ ul {
     width: 100px;
     height: 100px;
 }
+=======
+>>>>>>> e1cdb418f8e24fb6bfd46eca84800d503b0558eb
