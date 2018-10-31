@@ -19,7 +19,7 @@ ul{
   display: inline;
 }
 
-.rel_artworkPlaceholder {
+.rel_artworkPlaceholder, .rel_albumImg {
   display: inline-block;
 }
 
