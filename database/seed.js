@@ -17,7 +17,7 @@ const songGenerator = () => {
       artist_id: artist,
       genre: faker.random.word(),
       album_name: faker.random.words(),
-      album_img: faker.image.image(),
+      album_img: faker.image.avatar(),
       play_count: faker.random.number(),
       like_count: faker.random.number(),
       repost_count: faker.random.number(),

@@ -1,14 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const App = (props) => {
-    return(
-        <div>
-            <p>Testing React Config</p>
-        </div>
-    );
-}
-
-
+import App from './components/App.jsx';
 
 ReactDOM.render(<App />, document.getElementById('app'));
