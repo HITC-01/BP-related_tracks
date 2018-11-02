@@ -1,4 +1,4 @@
-ul{
+ul, li {
   padding: 0;
   list-style: none;
 }
@@ -21,6 +21,11 @@ ul{
 
 .rel_artworkPlaceholder, .rel_albumImg {
   display: inline-block;
+}
+
+.rel_albumMedia {
+  height: 50px;
+  padding-bottom: 20px;
 }
 
 .rel_albumImg {
@@ -94,30 +99,157 @@ ul {
 .rel_hover:hover {
   color: #000;
 }
-<<<<<<< HEAD
 
-#myModal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+.myModal {
+    display: 'block'; /* Hidden by default */
+    position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    left: 0px;
+    top: 5px;
+    margin: 10px;
+    width: 130px; /* Full width */
+    height: 200px; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    position: absolute;
-    width: 100px;
-    height: 100px;
+    background-color: #FFF;
+    border: 1px solid;
+    box-shadow: 1px 1px;
+    border-radius: 5px;
+    position: relative;
+    width: 95%;
+    height: 95%;
+    text-align: center;
 }
-=======
->>>>>>> e1cdb418f8e24fb6bfd46eca84800d503b0558eb
+
+.rel_albumImgModal {
+  display: block;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  position: relative;
+  top: 12px;
+}
+
+.rel_artistNameModal {
+  font-size: 14px;
+  text-align: center;
+}
+
+.rel_followerCountModal {
+  font-size: 14px;
+  display: inline-block; 
+  text-align: center; 
+}
+
+.button {
+  display: block;
+  margin: auto;
+}
+
+.proIcon {
+  color: rgb(255, 115, 0);
+}
+
+.playButtonContainer {
+  position: relative;
+}
+.playButton {
+  position: absolute;
+  background-color: rgb(255, 115, 0);
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  top: 9px;
+  left: 9px;
+}
+
+.playButton:hover {
+  background-color: rgb(255, 102, 0)
+}
+
+.playButtonImg {
+  color: white;
+  position: absolute;
+  top: 7px;
+  left: 9px;
+}
+
+.pauseButtonImg {
+  color: white;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+
+.pauseButtonImg {
+  color: white;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+
+.likeButtonContainer {
+  position: relative;
+}
+
+.likeButton {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #999;
+  width: 20px;
+  height: 20px;
+  top: 9px;
+  left: 240px;
+}
+
+.likeButton:hover {
+  border: 1px solid rgb(58, 57, 57);
+}
+
+
+#likeButtonImgOff {
+  color: #000;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+#likeButtonImgOn {
+  color: red;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.moreButtonContainer {
+  position: relative;
+}
+
+.moreButton {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #999;
+  width: 20px;
+  height: 20px;
+  top: 9px;
+  left: 265px;
+}
+
+.moreButtonImg {
+  color: #000;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.moreButton:hover {
+  border: 1px solid rgb(58, 57, 57);
+}
