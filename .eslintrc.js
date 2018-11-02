@@ -12,6 +12,6 @@ module.exports = {
     "import"
   ],
   "rules": {
-    "no-tabs": 0,
+    "react/forbid-prop-types": "warn",
   }
 };

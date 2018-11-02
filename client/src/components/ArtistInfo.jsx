@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import ArtistModal from './ArtistModal';
 
 class ArtistInfo extends React.Component {
   constructor(props) {
@@ -6,31 +8,44 @@ class ArtistInfo extends React.Component {
     this.state = {
       isHovered: false,
     };
-    this.mouseOver = this.mouseOver.bind(this);
+    this.mouseOut = this.mouseOut.bind(this);
   }
 
-  componentDidMount() {
-    console.log('test');
-  }
-  mouseOver(val) {
-    val.style.display = 'block';
+  mouseOver() {
+    this.setState({ isHovered: true });
   }
 
-  mouseOut(val) {
-    val.style.display = 'none';
+  mouseOut() {
+    this.setState({ isHovered: false });
   }
 
   render() {
-    if (this.state.isHovered) {
+    const { isHovered } = this.state;
+    const { song } = this.props;
+    if (isHovered) {
       return (
-        <div id="myModal" className="modal">
-          <div className="modal-content">
-            <p>Some text in the Modal..</p>
+        <div className="rel_artistNameContainer">
+          <div className="rel_artistName" onMouseEnter={() => { this.mouseOver(); }}>
+            <span className="rel_hover">{song.name.toUpperCase()}</span>
+            <ArtistModal song={song} mouseOut={this.mouseOut} />
           </div>
         </div>
       );
-    } 
-    return (<div></div>);
+    }
+    return (
+      <div className="rel_artistNameContainer">
+        <div className="rel_artistName">
+          <span className="rel_hover" onMouseEnter={() => { this.mouseOver(); }}>
+            {song.name.toUpperCase()}
+          </span>
+        </div>
+      </div>
+    );
   }
 }
+
+ArtistInfo.propTypes = {
+  song: PropTypes.object.isRequired,
+};
+
 export default ArtistInfo;
