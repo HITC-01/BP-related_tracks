@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from './setup';
-// import { mount } from './setup';
+import { mount } from './setup';
 import 'isomorphic-fetch';
 import App from '../client/src/components/App';
 
@@ -12,11 +12,14 @@ describe('<App />', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  // it('adds songs to state', () => {
-  //   const wrapper = shallow(<App url="http://localhost:3002" />);
-  //   wrapper.setState({ songs: {} });
-  //   wrapper.mount();
-  //   const currentState = wrapper.state().songs;
-  //   expect(currentState.length).toBeGreaterThan(0);
+
+  // test('adds songs to state', () => {
+  //   const wrapper = mount(<App url="http://localhost:3002" />);
+  //   const currentState = wrapper.debug();
+  //   console.log(currentState);
+  //   console.log(wrapper.state());
+  //   expect(wrapper.find('.songDataPlaceholder')).toBeDefined();
   // });
+
+
 });

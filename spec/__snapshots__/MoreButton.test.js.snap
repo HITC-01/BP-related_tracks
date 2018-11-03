@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests the more button component Should render correctly 1`] = `
+<div
+  className="moreButtonContainer"
+>
+  <div
+    className="moreButton"
+    title="more"
+  >
+    <i
+      className="fas fa-ellipsis-h moreButtonImg"
+    />
+  </div>
+</div>
+`;

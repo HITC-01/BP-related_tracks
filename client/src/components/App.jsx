@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   fetchRelatedSongs() {
-    let { url } = this.props;
+    const { url } = this.props;
 
     return fetch(`${url}/api/songs/:songid/related`, {
       headers: {
@@ -62,12 +62,14 @@ class App extends React.Component {
       <div className="songDataPlaceholder">
         <div className="songContainer">
           <h3 className="songContainerHeader">
-            <span><i className="fab fa-soundcloud" /></span>
+            <span>
+              <i className="fab fa-soundcloud" />
+            </span>
             <span className="rel_actualTitle">Related tracks</span>
           </h3>
           <span className="viewAll rel_hover">View all</span>
         </div>
-        <ul>
+        <ul className="list-items">
           <AddTrack onLoad={songs} />
         </ul>
       </div>

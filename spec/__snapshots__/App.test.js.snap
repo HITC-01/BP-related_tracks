@@ -27,6 +27,8 @@ exports[`<App /> Should render correctly 1`] = `
       View all
     </span>
   </div>
-  <ul />
+  <ul
+    className="list-items"
+  />
 </div>
 `;
