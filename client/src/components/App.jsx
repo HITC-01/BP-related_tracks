@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AddTrack from './AddTrack';
 
 class App extends React.Component {
@@ -14,15 +15,18 @@ class App extends React.Component {
     this.fetchRelatedSongs()
       .then((songs) => {
         this.setState({ songs });
-      });
+      })
+      .catch(() => this.setState({ songs: [] }));
   }
 
   fetchRelatedSongs() {
-    return fetch("/api/songs/:songid/related", {
+    let { url } = this.props;
+
+    return fetch(`${url}/api/songs/:songid/related`, {
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json',
       },
-      credentials: "same-origin"
+      credentials: 'same-origin',
     })
       .then(function (response) {
         return response.json()
@@ -49,7 +53,7 @@ class App extends React.Component {
             return songs;
           })
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err));
   }
 
   render() {
@@ -70,4 +74,9 @@ class App extends React.Component {
     );
   }
 }
+
+App.defaultProps = {
+  url: '',
+};
+
 export default App;

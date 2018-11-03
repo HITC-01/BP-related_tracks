@@ -1,15 +1,22 @@
 import React from 'react';
-import { mount } from './setup.js';
 import renderer from 'react-test-renderer';
-import "isomorphic-fetch";
-import App from '../client/src/components/App.jsx';
+import { shallow } from './setup';
+// import { mount } from './setup';
+import 'isomorphic-fetch';
+import App from '../client/src/components/App';
 
-describe('testing', () => {
-  it('does stuff', () => {
-    const test = 1000000;
-    const wrapper = mount(<App />);
-    // const instance = wrapper.instance();
-    console.log(wrapper);
-    expect(wrapper.abbreviateNumber(test)).toEqual('1.0M');
+describe('<App />', () => {
+  test('Should render correctly', () => {
+    const component = renderer.create(<App url="http://localhost:3002" />);
+    const tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
+  // it('adds songs to state', () => {
+  //   const wrapper = shallow(<App url="http://localhost:3002" />);
+  //   wrapper.setState({ songs: {} });
+  //   wrapper.mount();
+  //   const currentState = wrapper.state().songs;
+  //   expect(currentState.length).toBeGreaterThan(0);
+  // });
 });

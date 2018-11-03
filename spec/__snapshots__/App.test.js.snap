@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> Should render correctly 1`] = `
+<div
+  className="songDataPlaceholder"
+>
+  <div
+    className="songContainer"
+  >
+    <h3
+      className="songContainerHeader"
+    >
+      <span>
+        <i
+          className="fab fa-soundcloud"
+        />
+      </span>
+      <span
+        className="rel_actualTitle"
+      >
+        Related tracks
+      </span>
+    </h3>
+    <span
+      className="viewAll rel_hover"
+    >
+      View all
+    </span>
+  </div>
+  <ul />
+</div>
+`;
