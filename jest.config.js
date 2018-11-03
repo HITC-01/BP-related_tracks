@@ -7,7 +7,7 @@ module.exports = {
     'text',
   ],
   collectCoverageFrom: [
-    'client/src/**/*.{js,jsx}',
+    'client/src/components/*.{js,jsx}',
     '!**/node_modules/**',
   ],
   setupFiles: [

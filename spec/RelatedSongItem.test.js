@@ -13,8 +13,6 @@ describe('tests the RelatedSongItem component', () => {
     wrapper.instance().mouseOn();
     const newState = wrapper.state().isHovered;
     expect(newState).toEqual(true);
-    // console.log(currentState);
-    // expect(currentState).toEqual(false);
   });
 
   it('tests the mouseOn function', () => {
@@ -27,7 +25,5 @@ describe('tests the RelatedSongItem component', () => {
     wrapper.instance().mouseOff();
     const newState = wrapper.state().isHovered;
     expect(newState).toEqual(false);
-    // console.log(currentState);
-    // expect(currentState).toEqual(false);
   });
 });

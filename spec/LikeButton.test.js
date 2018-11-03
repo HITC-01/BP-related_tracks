@@ -1,7 +1,5 @@
 import React from 'react';
 import { shallow } from './setup';
-// import renderer from 'react-test-renderer';
-// import "isomorphic-fetch";
 import LikeButton from '../client/src/components/LikeButton';
 
 describe('tests the like button component', () => {

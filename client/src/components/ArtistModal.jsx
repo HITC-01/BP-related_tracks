@@ -28,7 +28,7 @@ const ArtistModal = (props) => {
 
 ArtistModal.propTypes = {
   song: PropTypes.object.isRequired,
-  mouseOut: PropTypes.func.isRequired,
+  mouseOut: PropTypes.func,
 };
 
 export default ArtistModal;

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AddTrack from './AddTrack';
 
 class App extends React.Component {
