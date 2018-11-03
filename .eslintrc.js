@@ -13,5 +13,6 @@ module.exports = {
   ],
   "rules": {
     "react/forbid-prop-types": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   }
 };

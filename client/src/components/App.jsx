@@ -14,15 +14,18 @@ class App extends React.Component {
     this.fetchRelatedSongs()
       .then((songs) => {
         this.setState({ songs });
-      });
+      })
+      .catch(() => this.setState({ songs: [] }));
   }
 
   fetchRelatedSongs() {
-    return fetch("/api/songs/:songid/related", {
+    const { url } = this.props;
+
+    return fetch(`${url}/api/songs/:songid/related`, {
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json',
       },
-      credentials: "same-origin"
+      credentials: 'same-origin',
     })
       .then(function (response) {
         return response.json()
@@ -49,7 +52,7 @@ class App extends React.Component {
             return songs;
           })
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err));
   }
 
   render() {
@@ -58,16 +61,23 @@ class App extends React.Component {
       <div className="songDataPlaceholder">
         <div className="songContainer">
           <h3 className="songContainerHeader">
-            <span><i className="fab fa-soundcloud" /></span>
+            <span>
+              <i className="fab fa-soundcloud" />
+            </span>
             <span className="rel_actualTitle">Related tracks</span>
           </h3>
           <span className="viewAll rel_hover">View all</span>
         </div>
-        <ul>
+        <ul className="list-items">
           <AddTrack onLoad={songs} />
         </ul>
       </div>
     );
   }
 }
+
+App.defaultProps = {
+  url: '',
+};
+
 export default App;

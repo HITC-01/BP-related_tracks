@@ -1,9 +1,13 @@
 module.exports = {
-  verbose: true,
   transform: { '.*': 'babel-jest' },
   collectCoverage: true,
+  coverageReporters: [
+    'json',
+    'html',
+    'text',
+  ],
   collectCoverageFrom: [
-    '**/spec/*/*.{js,jsx}',
+    'client/src/components/*.{js,jsx}',
     '!**/node_modules/**',
   ],
   setupFiles: [

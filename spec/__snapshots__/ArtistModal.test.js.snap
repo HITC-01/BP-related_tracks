@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests the ArtistModal component Should render correctly 1`] = `
+<div
+  className="myModal"
+  id="Testing name"
+  onMouseLeave={[Function]}
+>
+  <div
+    className="modal-content"
+  >
+    <div>
+      <img
+        alt="Album art"
+        className="rel_albumImgModal"
+        height="50"
+        src="http://www.google.com"
+        width="50"
+      />
+      <p
+        className="rel_artistNameModal rel_hover"
+        title="Visit Testing name's profile"
+      >
+        Testing name
+        <i
+          className="fas fa-star proIcon"
+          title="Pro Unlimited user"
+        />
+      </p>
+      <i
+        className="fas fa-users"
+      />
+      <p
+        className="rel_followerCountModal rel_hover"
+        title="53,534 followers"
+      >
+        54k
+      </p>
+      <input
+        className="button"
+        type="button"
+        value="Follow"
+      />
+    </div>
+  </div>
+</div>
+`;
