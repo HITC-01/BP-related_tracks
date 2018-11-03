@@ -1,13 +1,13 @@
-# Project Name
+# Head in the Clouds - SoundCloud
 
-> Project description
+> This project is creating components that are found on https://soundcloud.com/. For my component I worked on the related tracks component.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/HITC-01/ms-comment
+  - https://github.com/HITC-01/lf-player
+  - https://github.com/HITC-01/BP-related_tracks
+  - https://github.com/HITC-01/gk-user
 
 ## Table of Contents
 
