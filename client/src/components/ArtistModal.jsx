@@ -31,4 +31,8 @@ ArtistModal.propTypes = {
   mouseOut: PropTypes.func,
 };
 
+ArtistModal.defaultProps = {
+  mouseOut: () => {},
+};
+
 export default ArtistModal;

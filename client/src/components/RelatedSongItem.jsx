@@ -10,27 +10,23 @@ class RelatedSongItem extends React.Component {
     this.state = {
       isHovered: false,
     };
-    this.mouseOn = this.mouseOn.bind(this);
-    this.mouseOff = this.mouseOff.bind(this);
+    this.isHovered = this.isHovered.bind(this);
   }
 
-  mouseOn() {
-    this.setState({ isHovered: true });
-  }
-
-  mouseOff() {
-    this.setState({ isHovered: false });
+  isHovered() {
+    const { isHovered } = this.state;
+    this.setState({ isHovered: !isHovered });
   }
 
   render() {
     const { song } = this.props;
     const { isHovered } = this.state;
     let songLengthRestricted = '';
-    if (song.title.length > 36) {
-      songLengthRestricted = song.title.slice(0, 36).concat('...');
+    if (song.title.length > 32) {
+      songLengthRestricted = song.title.slice(0, 32).concat('...');
     }
     return (
-      <li className="rel_relatedSongItem" onMouseEnter={() => { this.mouseOn(); }} onMouseLeave={() => { this.mouseOff(); }}>
+      <li className="rel_relatedSongItem" onMouseEnter={() => { this.isHovered(); }} onMouseLeave={() => { this.isHovered(); }}>
         <HoverContainer isHover={isHovered} song={song} />
         <span className="rel_albumImg">
           <div className="rel_artworkPlaceholder">

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AddTrack from './AddTrack';
 
 class App extends React.Component {
@@ -75,6 +76,10 @@ class App extends React.Component {
     );
   }
 }
+App.propTypes = {
+  url: PropTypes.string,
+
+};
 
 App.defaultProps = {
   url: '',
