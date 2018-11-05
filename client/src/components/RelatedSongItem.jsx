@@ -22,8 +22,8 @@ class RelatedSongItem extends React.Component {
     const { song } = this.props;
     const { isHovered } = this.state;
     let songLengthRestricted = '';
-    if (song.title.length > 32) {
-      songLengthRestricted = song.title.slice(0, 32).concat('...');
+    if (song.title.length > 33) {
+      songLengthRestricted = song.title.slice(0, 33).concat('...');
     }
     return (
       <li className="rel_relatedSongItem" onMouseEnter={() => { this.isHovered(); }} onMouseLeave={() => { this.isHovered(); }}>

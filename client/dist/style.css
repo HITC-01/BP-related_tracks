@@ -5,14 +5,17 @@ ul, li {
 
 body {
   font-family: 'Overpass', sans-serif;
+  width: 300px;
+  padding: 5px;
+  margin: 0;
 }
 
 #app {
-  margin: 0;
   padding: 0;
   border: 0;
   height: 252px;
   width: 300px;
+  margin: 0;
 }
 
 .rel_songStats {
