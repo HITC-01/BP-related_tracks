@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AddTrack from './AddTrack';
 
-class App extends React.Component {
+class SCRelated extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ class App extends React.Component {
         return response.json()
       })
       .then((responseAsJson) => {
-        let list = JSON.parse(responseAsJson[0].related_songs);
+        const list = JSON.parse(responseAsJson[0].related_songs);
         return Promise.all(list.map(song => {
           let url = `/api/songs/${song}/`
           return fetch(url, {
@@ -76,13 +76,13 @@ class App extends React.Component {
     );
   }
 }
-App.propTypes = {
+SCRelated.propTypes = {
   url: PropTypes.string,
 
 };
 
-App.defaultProps = {
+SCRelated.defaultProps = {
   url: '',
 };
 
-export default App;
+export default SCRelated;
