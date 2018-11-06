@@ -1,0 +1,10 @@
+.rel_artistName {
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 20px;
+  color: #999;
+}
+
+.rel_hover:hover {
+  color: #000;
+}

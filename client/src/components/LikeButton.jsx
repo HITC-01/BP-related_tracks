@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './LikeButton.css';
 
 class LikeButton extends React.Component {
   constructor(props) {
@@ -17,9 +18,9 @@ class LikeButton extends React.Component {
   render() {
     const { isClicked } = this.state;
     return (
-      <div className="likeButtonContainer">
-        <div title="like" className="likeButton" onClick={this.isClicked} onKeyDown={this.isClicked} role="presentation">
-          <i id={isClicked ? 'likeButtonImgOn' : 'likeButtonImgOff'} className="fas fa-heart" />
+      <div className={styles.likeButtonContainer}>
+        <div title="like" className={styles.likeButton} onClick={this.isClicked} onKeyDown={this.isClicked} role="presentation">
+          <i id={isClicked ? styles.likeButtonImgOn : styles.likeButtonImgOff} className="fas fa-heart" />
         </div>
       </div>
     );

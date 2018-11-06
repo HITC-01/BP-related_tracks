@@ -1,9 +1,11 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
+  host: 'fecsoundcloud.c06twtqi5hrz.us-west-1.rds.amazonaws.com',
+  user: 'screlated720',
+  password: '1HRSC1040',
   database: 'FECSoundCloud',
+  port: '3302',
 });
 
 connection.connect((err) => {

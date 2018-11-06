@@ -1,0 +1,23 @@
+.rel_songStatContainer {
+  float: left;
+  font-size: 11px;
+  line-height: 10px;
+}
+
+.rel_songStats {
+  color: #999;
+  padding: 0px;
+}
+
+.rel_songStats li {
+  display: inline;
+}
+
+.rel_songStatComponent i {
+  color: #999;
+  padding: 5px;
+}
+
+.rel_hover:hover {
+  color: #000;
+}

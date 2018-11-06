@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ArtistModal from './ArtistModal';
+import styles from './ArtistInfo.css';
 
 class ArtistInfo extends React.Component {
   constructor(props) {
@@ -24,9 +25,9 @@ class ArtistInfo extends React.Component {
     const { song } = this.props;
     if (isHovered) {
       return (
-        <div className="rel_artistNameContainer">
-          <div className="rel_artistName" onMouseLeave={() => { this.mouseOut(); }}>
-            <span className="rel_hover" onMouseEnter={() => { this.mouseOver(); }}>
+        <div>
+          <div className={styles.rel_artistName} onMouseLeave={() => { this.mouseOut(); }}>
+            <span className={styles.rel_hover} onMouseEnter={() => { this.mouseOver(); }}>
               {song.name.toUpperCase()}
             </span>
             <ArtistModal song={song} mouseOut={this.mouseOut} />
@@ -35,9 +36,9 @@ class ArtistInfo extends React.Component {
       );
     }
     return (
-      <div className="rel_artistNameContainer">
-        <div className="rel_artistName">
-          <span className="rel_hover" onMouseEnter={() => { this.mouseOver(); }}>
+      <div>
+        <div className={styles.rel_artistName} onMouseLeave={() => { this.mouseOut(); }}>
+          <span className={styles.rel_hover} onMouseEnter={() => { this.mouseOver(); }}>
             {song.name.toUpperCase()}
           </span>
         </div>

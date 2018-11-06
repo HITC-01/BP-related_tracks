@@ -1,5 +1,6 @@
 import React from 'react';
 import MoreModal from './MoreModal';
+import styles from './MoreButton.css';
 
 class MoreButton extends React.Component {
   constructor(props) {
@@ -18,16 +19,16 @@ class MoreButton extends React.Component {
   render() {
     const { isClicked } = this.state;
     return (
-      <div className="moreButtonContainer">
+      <div className={styles.moreButtonContainer}>
         <div
           title="more"
-          className={isClicked ? 'moreButtonClicked' : 'moreButton'}
+          className={isClicked ? styles.moreButtonClicked : styles.moreButton}
           onClick={this.isClicked}
           onKeyDown={this.isClicked}
           role="presentation"
         >
           <MoreModal currentState={isClicked} />
-          <i className={'fas fa-ellipsis-h '.concat(isClicked ? 'moreButtonImgClicked' : 'moreButtonImg')} />
+          <i className={'fas fa-ellipsis-h '.concat(isClicked ? styles.moreButtonImgClicked : styles.moreButtonImg)} />
         </div>
       </div>
     );

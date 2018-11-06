@@ -1,0 +1,19 @@
+.rel_relatedSongItem {
+  height: 50px;
+}
+
+.rel_artworkPlaceholder, .rel_albumImg {
+  display: inline-block;
+}
+
+.rel_songDataContainer {
+  position: relative;
+  display: inline-block;
+  top: -23px;
+}
+
+.rel_songName {
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 15px;
+}

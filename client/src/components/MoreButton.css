@@ -1,0 +1,47 @@
+.moreButtonContainer {
+  position: relative;
+}
+
+.moreButtonClicked {
+  position: absolute;
+  z-index: 1;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #ff5500;
+  width: 20px;
+  height: 20px;
+  top: 9px;
+  left: 265px;
+}
+
+.moreButton {
+  position: absolute;
+  z-index: 1;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  width: 20px;
+  height: 20px;
+  top: 9px;
+  left: 265px;
+}
+
+.moreButtonImgClicked {
+  margin: auto;
+  color: #ff5500;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.moreButtonImg {
+  margin: auto;
+  color: #000;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.moreButton:hover {
+  border: 1px solid rgb(58, 57, 57);
+}

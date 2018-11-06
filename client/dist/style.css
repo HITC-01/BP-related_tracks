@@ -125,7 +125,7 @@ ul {
     overflow: auto; /* Enable scroll if needed */
 }
 
-.modal-content {
+.modalContent {
     background-color: #ffffff;
     border: 1px solid;
     box-shadow: 1px 1px;
@@ -170,6 +170,7 @@ ul {
 .playButtonContainer {
   position: relative;
 }
+
 .playButton {
   position: absolute;
   background-color: #ff5500;
@@ -290,18 +291,18 @@ ul {
 
 
 .moreModal {
-  display: 'block'; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: 'block';
+  position: absolute;
+  z-index: 1;
   left: -10px;
   top: 10px;
   margin: 10px;
-  width: 150px; /* Full width */
-  height: 163px; /* Full height */
-  overflow: auto; /* Enable scroll if needed */  
+  width: 150px;
+  height: 163px;
+  overflow: auto; 
 }
 
-.moreModal-contentOn {
+.moreModal_contentOn {
     display: block;
     background-color: #ffffff;
     border: 1px solid #999;
@@ -313,7 +314,7 @@ ul {
     margin: 0;
 }
 
-.moreModal-contentOff {
+.moreModal_contentOff {
     display: none;
     background-color: #ffffff;
     border: 1px solid #999;
@@ -342,5 +343,4 @@ ul {
 
 .marginRight {
   margin-right: 6px;
-
 }

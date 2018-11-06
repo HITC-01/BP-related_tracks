@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AddTrack from './AddTrack';
+import styles from './SCRelated.css';
 
 class SCRelated extends React.Component {
   constructor(props) {
@@ -59,17 +60,17 @@ class SCRelated extends React.Component {
   render() {
     const { songs } = this.state;
     return (
-      <div className="songDataPlaceholder">
-        <div className="songContainer">
-          <h3 className="songContainerHeader">
+      <div>
+        <div className={styles.songContainer}>
+          <h3 className={styles.songContainerHeader}>
             <span>
               <i className="fab fa-soundcloud" />
             </span>
-            <span className="rel_actualTitle">Related tracks</span>
+            <span className={styles.rel_actualTitle}>Related tracks</span>
           </h3>
-          <span className="viewAll rel_hover">View all</span>
+          <span className={`${styles.viewAll} ${styles.rel_hover}`}>View all</span>
         </div>
-        <ul className="list-items">
+        <ul>
           <AddTrack onLoad={songs} />
         </ul>
       </div>

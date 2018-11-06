@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import HoverContainer from './HoverContainer';
 import ArtistInfo from './ArtistInfo';
 import SongStats from './SongStats';
+import styles from './RelatedSongItem.css';
 
 class RelatedSongItem extends React.Component {
   constructor(props) {
@@ -26,16 +27,16 @@ class RelatedSongItem extends React.Component {
       songLengthRestricted = song.title.slice(0, 33).concat('...');
     }
     return (
-      <li className="rel_relatedSongItem" onMouseEnter={() => { this.isHovered(); }} onMouseLeave={() => { this.isHovered(); }}>
+      <li className={styles.rel_relatedSongItem} onMouseEnter={() => { this.isHovered(); }} onMouseLeave={() => { this.isHovered(); }}>
         <HoverContainer isHover={isHovered} song={song} />
-        <span className="rel_albumImg">
-          <div className="rel_artworkPlaceholder">
-            <img className="rel_artwork" src={song.album_img} alt="Album art" width="50" height="50" />
+        <span className={styles.rel_albumImg}>
+          <div className={styles.rel_artworkPlaceholder}>
+            <img src={song.album_img} alt="Album art" width="50" height="50" />
           </div>
         </span>
-        <div className="rel_songDataContainer">
+        <div className={styles.rel_songDataContainer}>
           <ArtistInfo song={song} />
-          <div className="rel_songName">
+          <div className={styles.rel_songName}>
             <span title={song.title}>{songLengthRestricted || song.title}</span>
           </div>
           <SongStats song={song} />

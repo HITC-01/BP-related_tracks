@@ -1,0 +1,39 @@
+ul, li {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  width: 300px;
+  padding: 5px;
+  margin: 0;
+}
+
+.songContainer {
+  position: relative;
+  font-size: 14px;
+  border-bottom: 0.5px solid #999;
+}
+
+.songContainerHeader {
+  font-weight: 100;
+  margin: 0;
+  display: inline-block;
+  color: #999;
+}
+
+.rel_actualTitle {
+  font-weight: normal;
+  font-size: 14px;
+  color: #999; 
+}
+
+.viewAll {
+  color: #999;
+  float: right;
+}
+
+.rel_hover:hover {
+  color: #000;
+}

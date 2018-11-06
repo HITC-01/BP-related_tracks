@@ -1,0 +1,38 @@
+.playButtonContainer {
+  position: relative;
+}
+
+.playButton {
+  position: absolute;
+  background-color: #ff5500;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  top: 9px;
+  left: 9px;
+}
+
+.playButton:hover {
+  background-color: #ff3300;
+}
+
+.playButtonImg {
+  color: #ffffff;
+  position: absolute;
+  top: 7px;
+  left: 9px;
+}
+
+.pauseButtonImg {
+  color: #ffffff;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+
+.pauseButtonImg {
+  color: #ffffff;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}

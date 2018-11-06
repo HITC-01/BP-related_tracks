@@ -1,1 +1,4 @@
 client/dist/bundle.js
+
+#secret files
+.env

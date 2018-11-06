@@ -1,38 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './MoreModal.css';
 
 const MoreModal = (props) => {
   const { currentState } = props;
   return (
-    <div className="moreModal">
-      <div className={currentState ? 'moreModal-contentOn' : 'moreModal-contentOff'}>
-        <div className="moreModalData moreModalHover" title="Repost">
-          <span className="marginRight">
-            <i className="fas fa-exchange-alt moreButtonImg" />
+    <div className={styles.moreModal}>
+      <div className={currentState ? styles.moreModal_contentOn : styles.moreModal_contentOff}>
+        <div className={`${styles.moreModalData} ${styles.moreModalHover}`} title="Repost">
+          <span className={styles.marginRight}>
+            <i className={`fas fa-exchange-alt ${styles.moreButtonImg}`} />
           </span>
           <span>Repost</span>
         </div>
-        <div className="moreModalData moreModalHover" title="Share">
-          <span className="marginRight">
-            <i className="fas fa-share moreButtonImg" />
+        <div className={`${styles.moreModalData} ${styles.moreModalHover}`} title="Share">
+          <span className={styles.marginRight}>
+            <i className={`fas fa-share ${styles.moreButtonImg}`} />
           </span>
           <span>Share</span>
         </div>
-        <div className="moreModalData moreModalHover" title="Add to Next up">
-          <span className="marginRight">
-            <i className="fas fa-sliders-h moreButtonImg" />
+        <div className={`${styles.moreModalData} ${styles.moreModalHover}`} title="Add to Next up">
+          <span className={styles.marginRight}>
+            <i className={`fas fa-sliders-h ${styles.moreButtonImg}`} />
           </span>
           <span>Add to Next up</span>
         </div>
-        <div className="moreModalData moreModalHover">
-          <span className="marginRight">
-            <i className="fas fa-chart-line moreButtonImg" />
+        <div className={`${styles.moreModalData} ${styles.moreModalHover}`}>
+          <span className={styles.marginRight}>
+            <i className={`fas fa-chart-line ${styles.moreButtonImg}`} />
           </span>
           <span>Add to playlist</span>
         </div>
-        <div className="moreModalData moreModalHover" title="Go to station">
-          <span className="marginRight">
-            <i className="far fa-dot-circle moreButtonImg" />
+        <div className={`${styles.moreModalData} ${styles.moreModalHover}`} title="Go to station">
+          <span className={styles.marginRight}>
+            <i className={`far fa-dot-circle ${styles.moreButtonImg}`} />
           </span>
           <span>Station</span>
         </div>

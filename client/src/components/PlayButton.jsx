@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './PlayButton.css';
 
 class PlayButton extends React.Component {
   constructor(props) {
@@ -18,17 +19,17 @@ class PlayButton extends React.Component {
     const { isClicked } = this.state;
     if (!isClicked) {
       return (
-        <div className="playButtonContainer">
-          <div className="playButton" onClick={this.isClicked} onKeyDown={this.isClicked} role="presentation">
-            <i className="fas fa-play playButtonImg" />
+        <div className={styles.playButtonContainer}>
+          <div className={styles.playButton} onClick={this.isClicked} onKeyDown={this.isClicked} role="presentation">
+            <i className={`fas fa-play ${styles.playButtonImg}`} />
           </div>
         </div>
       );
     }
     return (
-      <div className="playButtonContainer">
-        <div className="playButton" onClick={this.isClicked} onKeyDown={this.isClicked} role="presentation">
-          <i className="fas fa-pause pauseButtonImg" />
+      <div className={styles.playButtonContainer}>
+        <div className={styles.playButton} onClick={this.isClicked} onKeyDown={this.isClicked} role="presentation">
+          <i className={`fas fa-pause ${styles.pauseButtonImg}`} />
         </div>
       </div>
     );
