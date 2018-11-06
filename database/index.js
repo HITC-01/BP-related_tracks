@@ -1,11 +1,10 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host: 'fecsoundcloud.c06twtqi5hrz.us-west-1.rds.amazonaws.com',
-  user: 'screlated720',
-  password: '1HRSC1040',
-  database: 'FECSoundCloud',
-  port: '3302',
+  host: 'localhost',
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
 connection.connect((err) => {
@@ -31,9 +30,9 @@ const getRelated = (callback) => {
 const getSong = (songid, callback) => {
   // const sql = `SELECT * FROM Songs WHERE id=${songid}`;
   const sql = `SELECT Songs.id, Songs.title, Songs.artist_id,
-      Songs.album_img, Songs.play_count, Songs.like_count, 
-      Songs.repost_count, Songs.comment_count, Songs.related_songs, 
-      Artists.name, Artists.followers FROM Songs INNER JOIN Artists 
+      Songs.album_img, Songs.play_count, Songs.like_count,
+      Songs.repost_count, Songs.comment_count, Songs.related_songs,
+      Artists.name, Artists.followers FROM Songs INNER JOIN Artists
       ON Songs.artist_id = Artists.id AND Songs.id=${songid}`;
   connection.query(sql, (err, results) => {
     if (err) {

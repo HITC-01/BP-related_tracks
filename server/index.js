@@ -1,16 +1,19 @@
+require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 const db = require('../database/index.js');
 
-const port = 3002;
+const port = process.env.PORT || 3002;
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/api/songs/:songid/related', (req, res) => {
+app.get('/songs/:songid/related', (req, res) => {
   db.getRelated((err, results) => {
     if (err) {
       res.status(500).send(err);
@@ -20,7 +23,7 @@ app.get('/api/songs/:songid/related', (req, res) => {
   });
 });
 
-app.get('/api/songs/:songid/', (req, res) => {
+app.get('/songs/:songid/', (req, res) => {
   const song = req.params.songid;
   db.getSong(song, (err, results) => {
     if (err) {

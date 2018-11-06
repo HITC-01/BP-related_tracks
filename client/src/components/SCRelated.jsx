@@ -6,6 +6,7 @@ import styles from './SCRelated.css';
 class SCRelated extends React.Component {
   constructor(props) {
     super(props);
+    this.songId = props.songId;
     this.state = {
       songs: [],
     };
@@ -22,37 +23,28 @@ class SCRelated extends React.Component {
 
   fetchRelatedSongs() {
     const { url } = this.props;
-
-    return fetch(`${url}/api/songs/:songid/related`, {
+    return fetch(`${url}/related/songs/:songid/related`, {
       headers: {
         'Content-Type': 'application/json',
       },
       credentials: 'same-origin',
     })
-      .then(function (response) {
-        return response.json()
-      })
+      .then(response => response.json())
       .then((responseAsJson) => {
         const list = JSON.parse(responseAsJson[0].related_songs);
-        return Promise.all(list.map(song => {
-          let url = `/api/songs/${song}/`
-          return fetch(url, {
+        return Promise.all(list.map((song) => {
+          const urlNew = `/related/songs/${song}/`;
+          return fetch(urlNew, {
             headers: {
-              "Content-Type": "application/json"
+              'Content-Type': 'application/json',
             },
-            credentials: "same-origin"
+            credentials: 'same-origin',
           })
-            .then(function (response) {
-              return response.json()
-            })
-            .then(responseSong => {
-              return responseSong[0];
-            })
+            .then(response => response.json())
+            .then(responseSong => responseSong[0])
             .catch(err => console.log(err));
         }))
-          .then(songs => {
-            return songs;
-          })
+          .then(songs => songs);
       })
       .catch(err => console.log(err));
   }
@@ -79,11 +71,12 @@ class SCRelated extends React.Component {
 }
 SCRelated.propTypes = {
   url: PropTypes.string,
-
+  songId: Proptypes.number,
 };
 
 SCRelated.defaultProps = {
   url: '',
+  songId: 1,
 };
 
 export default SCRelated;
