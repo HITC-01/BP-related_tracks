@@ -23,7 +23,7 @@ class SCRelated extends React.Component {
 
   fetchRelatedSongs() {
     const { url } = this.props;
-    return fetch(`${url}/related/songs/:songid/related`, {
+    return fetch(`${url}/related/songs/${this.songId}/related`, {
       headers: {
         'Content-Type': 'application/json',
       },

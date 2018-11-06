@@ -1,10 +1,11 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
 });
 
 connection.connect((err) => {
@@ -28,7 +29,6 @@ const getRelated = (callback) => {
 };
 
 const getSong = (songid, callback) => {
-  // const sql = `SELECT * FROM Songs WHERE id=${songid}`;
   const sql = `SELECT Songs.id, Songs.title, Songs.artist_id,
       Songs.album_img, Songs.play_count, Songs.like_count,
       Songs.repost_count, Songs.comment_count, Songs.related_songs,
