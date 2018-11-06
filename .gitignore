@@ -1,5 +1,6 @@
 ## MAC files ##
 .DS_Store
+client/dist/relatedTrack_bundle.js
 
 ## NPM ##
 npm
