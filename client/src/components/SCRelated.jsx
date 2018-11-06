@@ -71,7 +71,7 @@ class SCRelated extends React.Component {
 }
 SCRelated.propTypes = {
   url: PropTypes.string,
-  songId: Proptypes.number,
+  songId: PropTypes.number,
 };
 
 SCRelated.defaultProps = {

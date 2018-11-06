@@ -1,10 +1,9 @@
-DROP DATABASE IF EXISTS FECSoundCloud;
-CREATE DATABASE FECSoundCloud;
-
-USE FECSoundCloud;
+DROP DATABASE IF EXISTS soundcloud_bp;
+CREATE DATABASE soundcloud_bp;
+USE soundcloud_bp;
 
 DROP TABLE IF EXISTS `Artists`;
-		
+
 CREATE TABLE `Artists` (
   `id` BIGINT AUTO_INCREMENT,
   `name` VARCHAR(100),
@@ -14,7 +13,7 @@ CREATE TABLE `Artists` (
 );
 
 DROP TABLE IF EXISTS `Songs`;
-		
+
 CREATE TABLE `Songs` (
   `id` BIGINT AUTO_INCREMENT,
   `title` VARCHAR(100),
