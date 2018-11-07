@@ -52,7 +52,7 @@ class SCRelated extends React.Component {
   render() {
     const { songs } = this.state;
     return (
-      <div>
+      <div className={styles.relatedAll}>
         <div className={styles.songContainer}>
           <h3 className={styles.songContainerHeader}>
             <span>

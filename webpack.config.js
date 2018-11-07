@@ -31,7 +31,7 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'relatedTrack_bundle.js',
+    filename: 'sc-related.js',
     path: path.join(__dirname, './client/dist'),
   },
 };

@@ -7,11 +7,14 @@ const songGenerator = () => {
   const songs = [];
 
   for (let i = 1; i < 101; i += 1) {
-    const relate = [
-      faker.random.number({ min: 1, max: 100 }),
-      faker.random.number({ min: 1, max: 100 }),
-      faker.random.number({ min: 1, max: 100 }),
-    ];
+    const relate = [];
+    while (relate.length < 3) {
+      const rn = faker.random.number({ min: 1, max: 100 });
+      if ((rn !== i) && !(relate.includes(rn))) {
+        relate.push(rn);
+      }
+    }
+
     const artist = faker.random.number({ min: 1, max: 100 });
     const song = {
       title: faker.lorem.sentence(),

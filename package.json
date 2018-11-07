@@ -10,7 +10,7 @@
   "scripts": {
     "postinstall": "cp example.env .env && echo 'Add variables into .env file!'",
     "start": "nodemon server/index.js",
-    "react-dev": "webpack -d --watch",
+    "dev:react": "webpack -d --watch",
     "seed": "node database/seed.js",
     "test": "jest --coverage",
     "grunt": "grunt --verbose s3"
