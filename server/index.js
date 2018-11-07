@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/songs/:songid/related', (req, res) => {
+app.get('/related/songs/:songid/related', (req, res) => {
   db.getRelated((err, results) => {
     if (err) {
       res.status(500).send(err);
@@ -23,7 +23,7 @@ app.get('/songs/:songid/related', (req, res) => {
   });
 });
 
-app.get('/songs/:songid/', (req, res) => {
+app.get('/related/songs/:songid/', (req, res) => {
   const song = req.params.songid;
   db.getSong(song, (err, results) => {
     if (err) {
