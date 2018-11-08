@@ -3,11 +3,18 @@ import PropTypes from 'prop-types';
 import AddTrack from './AddTrack';
 import styles from './SCRelated.css';
 
+const parse = (pathname) => {
+  const splitString = pathname.split('/');
+  return splitString[2];
+};
+const songId = parse(window.location.pathname);
+
 class SCRelated extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       songs: [],
+      songid: songId,
     };
     this.fetchRelatedSongs = this.fetchRelatedSongs.bind(this);
   }
@@ -22,8 +29,9 @@ class SCRelated extends React.Component {
 
   fetchRelatedSongs() {
     const { url } = this.props;
+    const { songid } = this.state;
 
-    return fetch(`${url}/api/songs/:songid/related`, {
+    return fetch(`${url}/related/songs/${songid}/related`, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -35,7 +43,7 @@ class SCRelated extends React.Component {
       .then((responseAsJson) => {
         const list = JSON.parse(responseAsJson[0].related_songs);
         return Promise.all(list.map(song => {
-          let url = `/api/songs/${song}/`
+          let url = `/related/songs/${song}/`
           return fetch(url, {
             headers: {
               "Content-Type": "application/json"

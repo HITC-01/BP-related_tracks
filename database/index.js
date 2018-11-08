@@ -16,9 +16,8 @@ connection.connect((err) => {
   console.log('connected');
 });
 
-const getRelated = (callback) => {
-  const randNum = Math.floor(Math.random() * 6) + 1;
-  const sql = `SELECT related_songs FROM Songs WHERE id=${randNum};`;
+const getRelated = (songid, callback) => {
+  const sql = `SELECT related_songs FROM Songs WHERE id=${songid};`;
   connection.query(sql, (err, results) => {
     if (err) {
       callback(err);

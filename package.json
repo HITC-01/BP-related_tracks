@@ -11,13 +11,14 @@
     "postinstall": "cp example.env .env && echo 'Add variables into .env file!'",
     "start": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
-    "seed": "node database/seed.js",
+    "seed": "mysql -u root <database/schema.sql && node database/seed.js",
     "test": "jest --coverage",
     "grunt": "grunt --verbose s3"
   },
   "dependencies": {
     "bluebird": "^3.5.2",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "dotenv": "^6.1.0",
     "es6-promise": "^4.2.5",
     "express": "^4.16.4",

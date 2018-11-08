@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 const bodyParser = require('body-parser');
@@ -8,24 +9,31 @@ const db = require('../database/index.js');
 
 const port = 3002;
 
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../client/dist')));
+// app.use(bodyParser.json());
+// app.use('/songs/:songid/', express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/api/songs/:songid/related', (req, res) => {
-  db.getRelated((err, results) => {
+app.use(cors());
+app.use(bodyParser.json());
+app.use('/songs/:songId', express.static(path.join(__dirname, '../client/dist')));
+
+app.get('/related/songs/:songid/related', (req, res) => {
+  const song = req.params.songid;
+  db.getRelated(song, (err, results) => {
     if (err) {
       res.status(500).send(err);
+      console.log(err);
     } else {
       res.send(Object.assign({}, results));
     }
   });
 });
 
-app.get('/api/songs/:songid/', (req, res) => {
+app.get('/related/songs/:songid/', (req, res) => {
   const song = req.params.songid;
   db.getSong(song, (err, results) => {
     if (err) {
       res.status(500).send(err);
+      console.log(err);
     } else {
       res.send(Object.assign({}, results));
     }

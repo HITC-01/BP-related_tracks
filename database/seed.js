@@ -1,3 +1,4 @@
+require('dotenv').config();
 const faker = require('faker');
 const Promise = require('bluebird');
 const db = require('./index.js');
@@ -6,11 +7,14 @@ const songGenerator = () => {
   const songs = [];
 
   for (let i = 1; i < 101; i += 1) {
-    const relate = [
-      faker.random.number({ min: 1, max: 100 }),
-      faker.random.number({ min: 1, max: 100 }),
-      faker.random.number({ min: 1, max: 100 }),
-    ];
+    const relate = [];
+    while (relate.length < 3) {
+      const rn = faker.random.number({ min: 1, max: 100 });
+      if ((rn !== i) && !(relate.includes(rn))) {
+        relate.push(rn);
+      }
+    }
+
     const artist = faker.random.number({ min: 1, max: 100 });
     const song = {
       title: faker.lorem.sentence(),
@@ -44,10 +48,10 @@ const artistGenerator = () => {
 
 const artistSeed = Promise.resolve(artistGenerator());
 artistSeed.then((seeded) => {
-  const sql = `INSERT INTO Artists ( 
+  const sql = `INSERT INTO Artists (
     name,
     user_img,
-    followers) 
+    followers)
     VALUES (?, ?, ?)`;
 
   for (let i = 0; i < seeded.length; i += 1) {
@@ -71,17 +75,17 @@ artistSeed.then((seeded) => {
 
 const songSeed = Promise.resolve(songGenerator());
 songSeed.then((seeded) => {
-  const sql = `INSERT INTO Songs ( 
-    title, 
-    artist_id, 
-    genre, 
+  const sql = `INSERT INTO Songs (
+    title,
+    artist_id,
+    genre,
     album_name,
     album_img,
     play_count,
     like_count,
     repost_count,
     comment_count,
-    related_songs) 
+    related_songs)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
   for (let i = 0; i < seeded.length; i += 1) {
