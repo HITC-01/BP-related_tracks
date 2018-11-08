@@ -1,4 +1,6 @@
-client/dist/relatedTrack_bundle.js
+client/dist/*.js
+
+node_modules
 
 #secret files
 .env
