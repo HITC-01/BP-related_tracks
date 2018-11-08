@@ -3,10 +3,17 @@ import PropTypes from 'prop-types';
 import AddTrack from './AddTrack';
 import styles from './SCRelated.css';
 
+const parse = (pathname) => {
+  const splitString = pathname.split('/');
+  return splitString[2];
+};
+
+const songId = parse(window.location.pathname);
+
 class SCRelated extends React.Component {
   constructor(props) {
     super(props);
-    this.songId = props.songId;
+    this.songId = songId;
     this.state = {
       songs: [],
     };
