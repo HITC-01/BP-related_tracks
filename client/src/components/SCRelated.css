@@ -1,3 +1,15 @@
+.body {
+  font-family: 'Overpass', sans-serif;
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+}
+
+.body ul, li {
+  padding: 0;
+  list-style: none;  
+}
+
 .songContainer {
   position: relative;
   font-size: 14px;

@@ -9,9 +9,6 @@ const db = require('../database/index.js');
 
 const port = 3002;
 
-// app.use(bodyParser.json());
-// app.use('/songs/:songid/', express.static(path.join(__dirname, '../client/dist')));
-
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/songs/:songId', express.static(path.join(__dirname, '../client/dist')));
