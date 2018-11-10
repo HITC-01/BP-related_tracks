@@ -26,8 +26,8 @@ class ArtistInfo extends React.Component {
     if (isHovered) {
       return (
         <div>
-          <div className={styles.rel_artistName} onMouseLeave={() => { this.mouseOut(); }}>
-            <span className={styles.rel_hover} onMouseEnter={() => { this.mouseOver(); }}>
+          <div className={`${styles.rel_artistName} ${styles.rel_hover}`} onMouseLeave={() => { this.mouseOut(); }}>
+            <span onMouseEnter={() => { this.mouseOver(); }}>
               {song.name.toUpperCase()}
             </span>
             <ArtistModal song={song} mouseOut={this.mouseOut} />

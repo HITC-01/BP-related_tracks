@@ -13,11 +13,16 @@ const ArtistModal = (props) => {
     <div id={song.name} className={styles.myModal} onMouseLeave={() => { mouseOut(); }}>
       <div className={styles.modalContent}>
         <div>
-          <img className={styles.rel_albumImgModal} src={song.album_img} alt="Album art" width="50" height="50" />
-          <p title={toProfile} className={`${styles.rel_artistNameModal} ${styles.rel_hover}`}>
-            {song.name}
-            <i title="Pro Unlimited user" className={`fas fa-star ${styles.proIcon}`} />
-          </p>
+          <div className={styles.rel_albumImgContainer}>
+            <img className={styles.rel_albumImgModal} src={song.album_img} alt="Album art" width="50" height="50" />
+          </div>
+          <div className={styles.rel_artistNameHolder}>
+            <p title={toProfile} className={`${styles.rel_artistNameModal} ${styles.rel_hover}`}>
+              {song.name}
+              <i title="Pro Unlimited user" className={`fas fa-star ${styles.proIcon}`} />
+            </p>
+          </div>
+
           <i className="fas fa-users" />
           <p title={followerCount} className={`${styles.rel_followerCountModal} ${styles.rel_hover}`}>{numeral(song.followers).format('0,0a')}</p>
           <input type="button" className={styles.button} value="Follow" />

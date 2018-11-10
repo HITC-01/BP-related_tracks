@@ -11,7 +11,10 @@
   width: 20px;
   height: 20px;
   top: 9px;
-  left: 240px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .likeButton:hover {
@@ -21,14 +24,12 @@
 
 #likeButtonImgOff {
   color: #000;
-  position: absolute;
-  top: 2px;
-  left: 2px;
+  position: relative;
+  font-size: 12px;
 }
 
 #likeButtonImgOn {
   color: red;
-  position: absolute;
-  top: 2px;
-  left: 2px;
+  position: relative;
+  font-size: 12px;
 }

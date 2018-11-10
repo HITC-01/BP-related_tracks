@@ -10,29 +10,17 @@
   height: 30px;
   top: 9px;
   left: 9px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .playButton:hover {
   background-color: #ff3300;
 }
 
-.playButtonImg {
+.playButtonImg, .pauseButtonImg {
   color: #ffffff;
-  position: absolute;
-  top: 7px;
-  left: 9px;
-}
-
-.pauseButtonImg {
-  color: #ffffff;
-  position: absolute;
-  top: 7px;
-  left: 8px;
-}
-
-.pauseButtonImg {
-  color: #ffffff;
-  position: absolute;
-  top: 7px;
-  left: 8px;
+  position: relative;
 }

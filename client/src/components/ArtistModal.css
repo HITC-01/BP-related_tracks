@@ -1,13 +1,13 @@
 .myModal {
-    display: 'block'; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: 'block';
+    position: absolute; 
+    z-index: 1;
     left: 0px;
     top: 5px;
     margin: 10px;
-    width: 130px; /* Full width */
-    height: 200px; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    width: 130px;
+    height: 200px;
+    overflow: auto;
 }
 
 .modalContent {
@@ -32,6 +32,10 @@
   top: 12px;
 }
 
+.rel_artistNameModal {
+  top: 10px;
+}
+
 .rel_followerCountModal {
   font-size: 14px;
   display: inline-block; 
@@ -51,6 +55,12 @@
   color: #000;
 }
 
+.rel_artistNameHolder {
+  display: block;
+  position: relative;
+  top: 20px;
+  padding-bottom: 35px;
+}
 
 
 

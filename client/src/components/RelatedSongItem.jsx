@@ -23,8 +23,8 @@ class RelatedSongItem extends React.Component {
     const { song } = this.props;
     const { isHovered } = this.state;
     let songLengthRestricted = '';
-    if (song.title.length > 33) {
-      songLengthRestricted = song.title.slice(0, 33).concat('...');
+    if (song.title.length > 30) {
+      songLengthRestricted = song.title.slice(0, 30).concat('...');
     }
     return (
       <li className={styles.rel_relatedSongItem} onMouseEnter={() => { this.isHovered(); }} onMouseLeave={() => { this.isHovered(); }}>
@@ -36,7 +36,7 @@ class RelatedSongItem extends React.Component {
         </span>
         <div className={styles.rel_songDataContainer}>
           <ArtistInfo song={song} />
-          <div className={styles.rel_songName}>
+          <div className={`${styles.rel_songName} ${styles.rel_hover}`}>
             <span title={song.title}>{songLengthRestricted || song.title}</span>
           </div>
           <SongStats song={song} />

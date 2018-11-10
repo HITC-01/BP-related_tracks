@@ -1,8 +1,7 @@
 .body {
   font-family: 'Overpass', sans-serif;
   width: 100%;
-  padding: 5px;
-  margin: 0;
+  margin-top: 16px;
 }
 
 .body ul, li {

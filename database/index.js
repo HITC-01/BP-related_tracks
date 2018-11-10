@@ -21,7 +21,6 @@ const getRelated = (songid, callback) => {
 };
 
 const getSong = (songid, callback) => {
-  // const sql = `SELECT * FROM Songs WHERE id=${songid}`;
   const sql = `SELECT Songs.id, Songs.title, Songs.artist_id,
       Songs.album_img, Songs.play_count, Songs.like_count, 
       Songs.repost_count, Songs.comment_count, Songs.related_songs, 
